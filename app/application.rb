@@ -1,5 +1,7 @@
-class application
+class Application
 
+def call
 
+end
 
 end
