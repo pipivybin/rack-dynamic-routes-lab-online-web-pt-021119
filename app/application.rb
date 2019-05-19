@@ -6,7 +6,7 @@ def call(env)
   req = Rack::Request.new(env)
 
   if req.path.match("/items/")
-    item = req.params["price"]
+    req.path.split("/items/")
   else
     resp.write "error"
     resp.status = 404
