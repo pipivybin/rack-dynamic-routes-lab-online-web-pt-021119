@@ -6,9 +6,9 @@ def call(env)
   req = Rack::Request.new(env)
 
   if req.path.match("/items/")
-
+    
   else
-    resp.write "error" 
+    resp.write "error"
     resp.status = 404
 
 end
