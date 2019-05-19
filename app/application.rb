@@ -13,6 +13,7 @@ def call(env)
         resp.write "Item not found"
         resp.status = 400
       else
+        binding.pry
         resp.write the_item.price
       end
   else
