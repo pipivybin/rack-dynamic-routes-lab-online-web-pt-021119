@@ -6,7 +6,8 @@ def call(env)
   req = Rack::Request.new(env)
 
   if req.path.match("/items/")
-    req.path.split("/items/")
+    item = req.path.split("/items/").last
+    resp.write item.price
   else
     resp.write "error"
     resp.status = 404
