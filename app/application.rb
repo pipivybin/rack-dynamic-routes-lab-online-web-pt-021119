@@ -9,7 +9,7 @@ def call(env)
     item = req.path.split("/items/").last
     if the_item = Item.all.find {|x| x.name == item}.nil?
         resp.write "Item not found"
-        resp.status = 404
+        resp.status = 400
       else
         resp.write the_item.price
       end
