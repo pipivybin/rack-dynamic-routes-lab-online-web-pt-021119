@@ -11,7 +11,7 @@ def call(env)
   else
     resp.write "error"
     resp.status = 404
-
+  end
 end
 
 end
