@@ -7,6 +7,10 @@ def call(env)
 
   if req.path.match("/items/")
 
+  else
+    resp.write "error" 
+    resp.status = 404
+
 end
 
 end
