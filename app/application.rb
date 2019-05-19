@@ -10,6 +10,7 @@ def call(env)
     if the_item = Item.all.find {|x| x.name == item}.nil?
         resp.write "The item is not here"
         resp.status = 404
+      else
         resp.write the_item.price
   else
     resp.write "Route not found"
