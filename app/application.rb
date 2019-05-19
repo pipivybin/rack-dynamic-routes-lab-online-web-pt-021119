@@ -11,7 +11,7 @@ def call(env)
         if the_item.nil?
         resp.write "Item not found"
         resp.status = 400
-      else
+        else
         binding.pry
         resp.write the_item.price
       end
