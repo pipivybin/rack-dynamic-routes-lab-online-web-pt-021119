@@ -7,7 +7,7 @@ def call(env)
 
   if req.path.match("/items/")
     item = req.path.split("/items/").last
-    Item.all.each {|x| x.name == item}
+    Item.find.each {|x| x.name == item}
     resp.write Item.price
   else
     resp.write "Route not found"
