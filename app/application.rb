@@ -7,7 +7,7 @@ def call(env)
 
   if req.path.match("/items/")
     item = req.path.split("/items/").last
-    if the_item = Item.all.detect {|x| x.name == item}.nil?
+    if the_item = Item.all.find {|x| x.name == item}.nil?
         resp.write "Item not found"
         resp.status = 400
       else
