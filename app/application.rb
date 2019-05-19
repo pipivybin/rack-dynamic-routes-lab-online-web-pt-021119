@@ -7,8 +7,8 @@ def call(env)
 
   if req.path.match("/items/")
     item = req.path.split("/items/").last
-    the_item = Item.all.find {|x| x.name == item}
-    resp.write the_item.price
+    if the_item = Item.all.find {|x| x.name == item}.nil?
+        resp.write the_item.price
   else
     resp.write "Route not found"
     resp.status = 404
