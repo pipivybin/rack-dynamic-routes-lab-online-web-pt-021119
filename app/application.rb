@@ -12,6 +12,7 @@ def call(env)
         resp.status = 404
       else
         resp.write the_item.price
+      end
   else
     resp.write "Route not found"
     resp.status = 404
